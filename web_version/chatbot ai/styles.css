@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7d6e0; /* Soft pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #4d4d4d; /* Neutral text color */
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffe4b5; /* Light peach */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.chat-header {
+    background-color: #ffb3ba; /* Light red */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.message-content {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.user-message {
+    flex-direction: row-reverse;
+}
+
+.user-message .message-content {
+    background-color: #ffcc80; /* Bright orange */
+    margin-right: 10px;
+}
+
+.bot-message .message-content {
+    background-color: #d4a6ff; /* Soft lavender */
+    margin-left: 10px;
+}
+
+.profile-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #ffe4b5; /* Light peach */
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ffb3ba; /* Light red */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ffdeeb; /* Pale pink */
+    color: #4d4d4d;
+    outline: none;
+}
+
+#send-button {
+    padding: 10px 20px;
+    background-color: #80d4ff; /* Sky blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#send-button:hover {
+    background-color: #66c1ff; /* Brighter sky blue */
+}
+
+#send-button:disabled {
+    background-color: #b3e5fc; /* Soft blue */
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffdeeb; /* Pale pink */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffcc80; /* Bright orange */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffb3ba; /* Light red */
+}

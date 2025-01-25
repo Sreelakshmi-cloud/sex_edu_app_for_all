@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Good Touch, Bad Touch Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ff5722;
+            margin-bottom: 20px;
+        }
+
+        .quiz-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .quiz {
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: none; /* Hide all quizzes initially */
+        }
+
+        .quiz img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .options {
+            margin-top: 15px;
+        }
+
+        .option {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #1e88e5;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #1976d2;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff4081;
+        }
+
+        .message.correct {
+            color: #4caf50;
+        }
+
+        .message.incorrect {
+            color: #f44336;
+        }
+
+        .confetti {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: poppers 1s ease-in-out infinite;
+        }
+
+        .confetti .confetti-piece {
+            width: 10px;
+            height: 10px;
+            background-color: #ff5722;
+            margin: 3px;
+            border-radius: 50%;
+            animation: confetti-fall 2s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        @keyframes poppers {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Good Touch, Bad Touch Quiz</h1>
+    <div class="quiz-container">
+        <!-- Question 1 -->
+        <div id="q1" class="quiz">
+            <img src="https://media.istockphoto.com/id/1189615502/vector/happy-cute-kid-girl-hugging-mom-love.jpg?s=612x612&w=0&k=20&c=uUaixZqT87zo8TmLrIXUSjv7K25hq3e4O5ax-eTTEfU=" alt="Person Hugging">
+            <div class="options">
+                <div class="option" onclick="checkAnswer('q1', 'correct')">Good Touch</div>
+                <div class="option" onclick="checkAnswer('q1', 'incorrect')">Bad Touch</div>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="q2" class="quiz">
+            <img src="https://media.istockphoto.com/id/1254172656/vector/evacuation-drills-what-you-should-not-do-hit-or-push-a-person-from-behind.jpg?s=612x612&w=0&k=20&c=7vGOFp70e2aPGR44XgrvDPytdFToOUnfYwKMB7ePfbM=" alt="Person Pushing">
+            <div class="options">
+                <div class="option" onclick="checkAnswer('q2', 'incorrect')">Good Touch</div>
+                <div class="option" onclick="checkAnswer('q2', 'correct')">Bad Touch</div>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="q3" class="quiz">
+            <img src="https://media.istockphoto.com/id/1180560169/vector/cute-happy-kid-hand-shake-with-friend.jpg?s=612x612&w=0&k=20&c=CL1wdy6hEUG4H2pGwusWJXZygEyQGhmFdcHiO9970fs=" alt="Person Handshake">
+            <div class="options">
+                <div class="option" onclick="checkAnswer('q3', 'correct')">Good Touch</div>
+                <div class="option" onclick="checkAnswer('q3', 'incorrect')">Bad Touch</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <div class="confetti" id="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+
+        function checkAnswer(question, answer) {
+            const correctAnswers = {
+                q1: 'correct', // First question is Good Touch
+                q2: 'correct', // Second question is Bad Touch
+                q3: 'correct'  // Third question is Good Touch
+            };
+
+            const messageElement = document.getElementById('message');
+            const confettiElement = document.getElementById('confetti');
+            const currentQuiz = document.getElementById(question);
+
+            // Check if the answer is correct
+            if (answer === correctAnswers[question]) {
+                messageElement.textContent = "Congratulations! You got it right!";
+                messageElement.classList.remove('incorrect');
+                messageElement.classList.add('correct');
+
+                confettiElement.style.display = 'flex';
+                setTimeout(() => {
+                    confettiElement.style.display = 'none';
+                }, 3000); // Hide confetti after 3 seconds
+
+                // Hide the current question and show the next one
+                currentQuiz.style.display = 'none';
+                currentQuestion++;
+
+                // Show next question if exists
+                if (currentQuestion <= 3) {
+                    const nextQuiz = document.getElementById(`q${currentQuestion}`);
+                    nextQuiz.style.display = 'block';
+                }
+            } else {
+                messageElement.textContent = "Oops! Try again.";
+                messageElement.classList.remove('correct');
+                messageElement.classList.add('incorrect');
+            }
+        }
+
+        // Show the first question when the page loads
+        document.getElementById('q1').style.display = 'block';
+    </script>
+
+</body>
+</html>
+

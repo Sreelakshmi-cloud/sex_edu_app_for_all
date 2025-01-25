@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Written Letter Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f3f3; /* Soft pastel background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            overflow: hidden; /* Prevent scroll */
+        }
+
+        .letter {
+            width: 900px; /* Increased width */
+            background-color: #fff;
+            border: 2px solid #e6b3b3; /* Light pink border */
+            padding: 20px; /* Reduced padding */
+            border-radius: 15px; /* Slightly rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+            background-color: #fff8f8; /* Soft pastel color */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-height: 700px; /* Reduced height */
+            overflow-y: auto; /* Allow vertical scroll only if needed */
+        }
+
+        .letter:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 5px dashed #f7c9c9; /* Dashed border to mimic a letter's edge */
+            border-radius: 15px;
+        }
+
+        .letter img {
+            width: 150px; /* Reduced size for the main image */
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .letter-content {
+            padding-left: 180px; /* Adds space for the image on the left */
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .letter h2 {
+            font-size: 1.8rem; /* Decreased font size */
+            margin-bottom: 15px;
+            color: #ff6b6b; /* Pastel red color */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .letter p {
+            font-size: 1rem; /* Decreased font size */
+            color: #666;
+            font-family: 'Patrick Hand', cursive; /* Neat handwritten font */
+            line-height: 1.6;
+        }
+
+        .section-header {
+            margin-top: 30px;
+            font-size: 1.6rem;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .section-content {
+            display: flex; /* Flexbox for layout */
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+
+        .section-img {
+            width: 120px; /* Small image for Menarche and Menopause */
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="letter">
+        <img src="https://media.istockphoto.com/id/1404401573/vector/worried-woman-with-menstrual-irregularities-semi-flat-color-vector-character.jpg?s=612x612&w=0&k=20&c=Wu3KNH4LfjlCPQqtdVu3ZVE7ONAMRtA0JqOvyMUJ-Zk=" alt="Image of Topic">
+        <div class="letter-content">
+            <h2>Understanding Menstruation</h2>
+            <p>Menstruation, or a period, is a natural part of growing up for girls, usually beginning between the ages of 10 and 16, with an average starting age of 12. It involves the shedding of the uterine lining, which typically lasts 3-7 days and occurs once a month. During this time, girls may experience symptoms like cramps, bloating, mood swings, and fatigue. Menstrual cycles vary in length but generally last between 21-35 days.</p>
+
+            <div class="section-header">Menarche</div>
+            <div class="section-content">
+                
+                <p>Menarche is the term used for a girl's first menstrual period, marking the beginning of menstruation and the transition into puberty. It typically occurs between ages 10 and 16, with the average age around 12. Menarche signals that a girl's body is capable of reproduction. Before menarche, a girl’s body undergoes several physical changes such as breast development, pubic hair growth, and changes in body shape.</p>
+            </div>
+
+            <div class="section-header">Menopause</div>
+            <div class="section-content">
+                
+                <p>Menopause refers to the natural biological process that marks the end of a woman's menstrual cycles and fertility, typically occurring between the ages of 45 and 55, with the average age around 51. It is diagnosed after a woman has gone 12 consecutive months without a period. Menopause happens when the ovaries stop producing eggs and levels of estrogen and progesterone decline. This leads to the cessation of menstruation and can cause symptoms such as hot flashes, night sweats, mood swings, sleep disturbances, and vaginal dryness.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

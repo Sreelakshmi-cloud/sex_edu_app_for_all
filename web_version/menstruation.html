@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menstruation Quiz for Kids</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f8ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ff4081;
+            margin-bottom: 20px;
+        }
+
+        .quiz-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .quiz {
+            width: 250px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: none; /* Hide all quizzes initially */
+        }
+
+        .quiz img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .options {
+            margin-top: 15px;
+        }
+
+        .option {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #1e88e5;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #1976d2;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff4081;
+        }
+
+        .message.correct {
+            color: #4caf50;
+        }
+
+        .message.incorrect {
+            color: #f44336;
+        }
+
+        .confetti {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: poppers 1s ease-in-out infinite;
+        }
+
+        .confetti .confetti-piece {
+            width: 10px;
+            height: 10px;
+            background-color: #ff4081;
+            margin: 3px;
+            border-radius: 50%;
+            animation: confetti-fall 2s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        @keyframes poppers {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Menstruation Quiz for Kids</h1>
+    <div class="quiz-container">
+        <!-- Question 1: What is menstruation? -->
+        <div id="q1" class="quiz">
+            <img src="https://media.istockphoto.com/id/853147544/vector/cartoon-woman-suffering-from-abdominal-pain-at-home-gynecology-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=MC37QT6pY2qpoXGoePo4Fxa59RBytS7uj5qmbrV1xEg=" alt="Sanitary Pad">
+            <div class="options">
+                <div class="option" onclick="checkAnswer('q1', 'correct')">It is a natural process.</div>
+                <div class="option" onclick="checkAnswer('q1', 'incorrect')">It is a disease.</div>
+            </div>
+        </div>
+
+        <!-- Question 2: When do girls start menstruating? -->
+        <div id="q2" class="quiz">
+            <img src="https://img.freepik.com/premium-vector/menstruation-theme-feminine-hygiene-pad-menstrual-cup-painkillers-calendar-women-s-health-concept-feminine-hygiene-products-cartoon-vector-illustration-isolated-white-background_559428-923.jpg" alt="Menstrual Products">
+            <div class="options">
+                <div class="option" onclick="checkAnswer('q2', 'incorrect')">At age 3</div>
+                <div class="option" onclick="checkAnswer('q2', 'correct')">Around age 12</div>
+            </div>
+        </div>
+
+        <!-- Question 3: How should you take care of yourself during menstruation? -->
+        <div id="q3" class="quiz">
+            <img src="https://img.freepik.com/premium-photo/comfort-menstruation_851192-7172.jpg" alt="Comfortable Girl">
+            <div class="options">
+                <div class="option" onclick="checkAnswer('q3', 'correct')">Rest and stay clean.</div>
+                <div class="option" onclick="checkAnswer('q3', 'incorrect')">Stay active and don’t rest.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <div class="confetti" id="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+
+        // Function to check answer and show next question
+        function checkAnswer(question, answer) {
+            const correctAnswers = {
+                q1: 'correct', // First question: correct answer is "It is a natural process."
+                q2: 'correct', // Second question: correct answer is "Around age 12"
+                q3: 'correct'  // Third question: correct answer is "Rest and stay clean."
+            };
+
+            const messageElement = document.getElementById('message');
+            const confettiElement = document.getElementById('confetti');
+            const currentQuiz = document.getElementById(question);
+
+            // Check if the answer is correct
+            if (answer === correctAnswers[question]) {
+                messageElement.textContent = "Congratulations! You got it right!";
+                messageElement.classList.remove('incorrect');
+                messageElement.classList.add('correct');
+
+                // Show confetti effect
+                confettiElement.style.display = 'flex';
+                setTimeout(() => {
+                    confettiElement.style.display = 'none';
+                }, 3000); // Hide confetti after 3 seconds
+
+                // Hide the current question and show the next one
+                currentQuiz.style.display = 'none';
+                currentQuestion++;
+
+                // Show next question if exists
+                if (currentQuestion <= 3) {
+                    const nextQuiz = document.getElementById(`q${currentQuestion}`);
+                    nextQuiz.style.display = 'block';
+                }
+            } else {
+                messageElement.textContent = "Oops! Try again.";
+                messageElement.classList.remove('correct');
+                messageElement.classList.add('incorrect');
+            }
+        }
+
+        // Show the first question when the page loads
+        document.getElementById('q1').style.display = 'block';
+    </script>
+
+</body>
+</html>

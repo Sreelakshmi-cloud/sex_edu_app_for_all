@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sex Education Topics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3f3; /* Light pastel background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 2.2rem; /* Reduced heading size */
+            margin-bottom: 40px;
+            color: #ffb6b9; /* Soft pastel pink */
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .carousels-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .carousel {
+            background-color: #fff8f8; /* Soft pastel color */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 22%; /* Four carousels in a row */
+            height: 450px; /* Increased height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-content {
+            text-align: center;
+            flex-grow: 1;
+            padding-top: 15px;
+        }
+
+        .carousel h2 {
+            font-size: 1.6rem;
+            color: #ff7f7f; /* Pastel red color */
+        }
+
+        .carousel p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.4;
+            margin-top: 10px;
+        }
+
+        .how-to-use-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ff7f7f; /* Soft pastel red */
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .how-to-use-btn:hover {
+            background-color: #ff5e5e; /* Slightly darker pastel red */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contraceptive Methods</h1>
+
+    <div class="carousels-container">
+        <!-- Carousel 1 -->
+        <div class="carousel">
+            <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/995841-Infographic-Set-It-and-Forget-It-Comparing-Long-Acting-Birth-Control-Methods-1296x1415-Body-1.png?w=1155&h=2971" alt="Contraceptives">
+            <div class="carousel-content">
+                <h2>IUDs</h2>
+                <p>An IUD is a small device placed in the uterus to prevent pregnancy. It’s over 99% effective, lasts 3-10 years, and comes in hormonal or types.</p>
+                <a href="https://youtube.com/shorts/ZUAfxP_aLSg?si=yB-Rmi9cjL85-NSG" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+
+        <!-- Carousel 2 -->
+        <div class="carousel">
+            <img src="https://img.freepik.com/premium-vector/gynecology-illustration-birth-control-methods-vector_980832-1130.jpg?w=360" alt="Consent">
+            <div class="carousel-content">
+                <h2>Hormonal Methods</h2>
+                <p>Hormonal contraceptives prevent pregnancy by altering ovulation and cervical mucus. They include pills, patches etc.</p>
+                <a href="https://youtu.be/pZYY4egKMQI?si=rF3jTAkfrdRKGSb6" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+
+        <!-- Carousel 3 -->
+        <div class="carousel">
+            <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/06/Birth_Control_Meathods_1296x728-header-1296x729.jpg?w=1155&h=2268" alt="STDs">
+            <div class="carousel-content">
+                <h2>Barrier Method</h2>
+                <p>They block sperm to prevent pregnancy. They include condoms, diaphragms, cervical caps and condoms also protecting against STIs.</p>
+                <a href="https://youtu.be/w6758yz9NqU?si=GHNufxzL5llnygoh" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+
+        <!-- Carousel 4 -->
+        <div class="carousel">
+            <img src="https://m3.healio.com/~/media/images/collections/womens-health/trendline-birth-control/ef565_trendline_birth-control_4.jpg" alt="Puberty">
+            <div class="carousel-content">
+                <h2>Emergency</h2>
+                <p>Emergency contraception includes morning-after pills (Plan B, Ella) and the copper IUD, which is the most effective if inserted within five days.</p>
+                <a href="https://youtu.be/YPl5n9AtPnE?si=HUKuEUHrEg4H-Zaj" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

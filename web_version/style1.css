@@ -1,0 +1,89 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and overall page style */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e4d7; /* Pastel beige background */
+    color: #3c3c3c;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Main container for carousels */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Arrange carousels in a column */
+    align-items: center; /* Center align the carousels */
+    gap: 30px; /* Add space between carousels */
+  }
+  
+  /* Heading style */
+  .main-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #a5d8d2; /* Pastel teal */
+    width: 100%;
+  }
+  
+  /* Carousel styles */
+  .carousel {
+    width: 90%; /* Each carousel takes up 90% of the container's width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    max-width: 1500px; /* Set a maximum width for wide carousels */
+    height: 600px; /* Increased height for a more spacious look */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .carousel-heading {
+    font-size: 2.5rem;
+    color: #f9a8d4; /* Pastel pink */
+    margin-bottom: 20px;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 350px; /* Set a fixed height for the image to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-description {
+    font-size: 1.2rem;
+    color: #5c6b73;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styles */
+  .btn {
+    padding: 12px 25px;
+    background-color: #f8d0a0; /* Pastel peach */
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn:hover {
+    background-color: #f4b37d; /* Darker peach on hover */
+  }
+  

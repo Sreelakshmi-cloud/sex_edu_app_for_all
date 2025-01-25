@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sex Education for Kids</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ff5722;
+            margin-top: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .video-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 100%;
+            width: 280px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #ff4081;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #1e88e5;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #1976d2;
+        }
+
+        .video-container:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Sex Education for Kids</h1>
+
+    <div class="container">
+        <div class="video-section">
+            <!-- Video 1: Good Touch, Bad Touch -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/u_QWtznV23g?si=81s3E74IQ72xdlaQ" title="Good Touch, Bad Touch" allowfullscreen></iframe>
+                <div class="video-title">Good Touch, Bad Touch</div>
+                <div class="description">
+                    Learn how to understand the difference between good touch and bad touch, and how to stay safe.
+                </div>
+                <a href="goodtouch.html" class="button">Quiz</a>
+            </div>
+
+            <!-- Video 2: Menstruation -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/PeL_XtBrOxw?si=TAIP-RRjvo0z-0zH" title="Understanding Menstruation" allowfullscreen></iframe>
+                <div class="video-title">Menstruation</div>
+                <div class="description">
+                    A simple explanation of menstruation and how it’s a natural part of growing up.
+                </div>
+                <a href="menstruation.html" class="button">Quiz</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Age Group</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4a4a4a;
+            text-align: center;
+        }
+
+        .age-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .age-button {
+            width: 250px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            background-color: #4caf50;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .age-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+            background-color: #45a049;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Your Age Group</h1>
+    <div class="age-buttons">
+        <a href="age5to12.html" class="age-button">5 to 12</a>
+        <a href="age13to18.html" class="age-button">13 to 18</a>
+        <a href="age18andabove.html" class="age-button">18 and Above</a>
+    </div>
+    <footer>© 2025 Sex Education App. All rights reserved.</footer>
+</body>
+</html>

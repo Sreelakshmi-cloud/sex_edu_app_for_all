@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sex Education Topics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3f3; /* Light pastel background */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 2.2rem; /* Reduced heading size */
+            margin-bottom: 40px;
+            color: #ffb6b9; /* Soft pastel pink */
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .carousels-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .carousel {
+            background-color: #fff8f8; /* Soft pastel color */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 22%; /* Four carousels in a row */
+            height: 450px; /* Increased height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-content {
+            text-align: center;
+            flex-grow: 1;
+            padding-top: 15px;
+        }
+
+        .carousel h2 {
+            font-size: 1.6rem;
+            color: #ff7f7f; /* Pastel red color */
+        }
+
+        .carousel p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.4;
+            margin-top: 10px;
+        }
+
+        .how-to-use-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ff7f7f; /* Soft pastel red */
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .how-to-use-btn:hover {
+            background-color: #ff5e5e; /* Slightly darker pastel red */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sex Education Topics</h1>
+
+    <div class="carousels-container">
+        <!-- Carousel 1 -->
+        <div class="carousel">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoGyb5qZVgAGpR__kYygNKbn8t--mlLv0dgQ&s" alt="Contraceptives">
+            <div class="carousel-content">
+                <h2>Tampons</h2>
+                <p>Sanitary pads are absorbent materials worn inside underwear to manage menstrual flow.</p>
+                <a href="https://youtu.be/5ECfobwUhsM?si=6VGyLI-fC_q19fxd" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+
+        <!-- Carousel 2 -->
+        <div class="carousel">
+            <img src="https://static.vecteezy.com/system/resources/previews/002/497/611/non_2x/sanitary-napkin-feminine-hygiene-pads-women-hygiene-product-personal-hygiene-intimate-woman-hygiene-cartoon-illustration-free-vector.jpg" alt="Consent">
+            <div class="carousel-content">
+                <h2>Sanitary Pads</h2>
+                <p>Sanitary pads are absorbent materials worn inside underwear to manage menstrual flow.</p>
+                <a href="https://youtu.be/J6bZsI1pi_o?si=8NAYh7ij_0hrps4d" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+
+        <!-- Carousel 3 -->
+        <div class="carousel">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2qQPETryN76eACErU8alh5Akkci-6eGSYYQ&s" alt="STDs">
+            <div class="carousel-content">
+                <h2>Period Underwear</h2>
+                <p>Period underwear are worn just like a regular pair of underwear. They're usually made with extra layer meant to prevent leaks.</p>
+                <a href="https://youtu.be/HtTe3sfsfB8?si=luhNqoWjOMqmA8IX" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+
+        <!-- Carousel 4 -->
+        <div class="carousel">
+            <img src="https://www.shutterstock.com/shutterstock/videos/1076252678/thumb/3.jpg?ip=x480" alt="Puberty">
+            <div class="carousel-content">
+                <h2>Menstrual Cup</h2>
+                <p>A menstrual cup is a menstrual hygiene device which is inserted into the vagina during menstruation. Its purpose is to collect menstrual fluid.</p>
+                <a href="https://youtu.be/hguXlPbZE9g?si=TLgLc-UaC3Bcj6lC" class="how-to-use-btn" target="_blank">How to Use</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
